@@ -25,12 +25,337 @@
    <hr />
    <div class="photosgrid">
       <pre>
-   This is an example of text
-    that will preserve its formatting.
-      - It will keep all the spaces.
-      - It will keep all the line breaks.
 
-      You can type text here as you'd like it to appear.
+-------------------------------------------------------------------
+   1 Syntax
+Whitespace and indentation
+If you’ve been working in other programming languages such as Java, C#, or C/C++, you know that these languages use semicolons (;) to separate the statements.
+Python, however, uses whitespace and indentation to construct the code structure.
+# define main function to print out something
+def main():
+    i = 1
+    max = 10
+    while (i < max):
+        print(i)
+        i = i + 1
+
+# call function main 
+main()
+
+At the end of each line, you don’t see any semicolon to terminate the statement. And the code uses indentation to format the code.
+By using indentation and whitespace to organize the code, Python code gains the following advantages:
+First, you’ll never miss the beginning or ending code of a block like in other programming languages such as Java or C#.
+Second, the coding style is essentially uniform. If you have to maintain another developer’s code, that code looks the same as yours.
+Third, the code is more readable and clear in comparison with other programming languages.
+Comments
+The comments are as important as the code because they describe why a piece of code was written.
+When the Python interpreter executes the code, it ignores the comments.
+In Python, a single line comment begins with a hash (#) symbol followed by the comment. For example:
+# This is a single line comment in Python
+
+Continuation of statements
+Python uses a newline character to separate statements. It places each statement on one line.
+However, a long statement can span multiple lines by using the backslash (\) character.
+The following example illustrates how to use the backslash (\) character to continue a statement in the second line:
+if (a == True) and (b == False) and \
+   (c == True):
+    print("Continuation of statements")
+
+Identifiers
+Identifiers are names that identify variables, functions, modules, classes, and other objects in Python.
+The name of an identifier needs to be a letter or underscore (_). The following characters can be alphanumeric or underscore.
+Python identifiers are case-sensitive. For example, the counter and Counter are different identifiers.
+In addition, you cannot use Python keywords for naming identifiers.
+Keywords
+Some words have special meanings in Python. They are called keywords.
+
+
+The following shows the list of keywords in Python:
+
+
+Python provides a special module for listing its keywords called keyword. 
+To find the current keyword list, you use the following code:
+import keyword
+
+print(keyword.kwlist)
+
+String literals
+Python uses single quotes ('), double quotes ("), triple single quotes (''') and triple-double quotes (""") to denote a string literal.
+The string literal need to be sourounding with the same type of quotes. For eample, if you use a single quote to start a string literal, you need to use the same single quote to end it.
+The following shows some examples of string literals:
+s = 'This is a string'
+print(s)
+s = "Another string using double quotes"
+print(s)
+s = ''' string can span
+        multiple line '''
+print(s)
+Summary
+A Python statement ends with a newline character.
+Python uses spaces and identation to organize its code structure.
+Identifiers are names that identify variables, functions, modules, classes, etc. in Python.
+Comments describe why the code works. They are ingored by the Python interpreter.
+Use the single quote, double-quotes, tripple-quotes, or tripple double-quotes to denote
+
+2 Variables
+What is a variable in Python
+When you develop a program, you need to manage values, a lot of them. To store values, you use variables.
+In Python, a variable is a label that you can assign a value to it. And a variable is always associated with a value. For example:
+
+message = 'Hello, World!'
+print(message)
+
+message = 'Good Bye!'
+print(message)
+
+
+
+In this example, message is a variable. It holds the string 'Hello, World!'. The print() function shows the message Hello, World! to the screen.
+
+The next line assigns the string 'Good Bye!' to the message variable and print its value to the screen.
+
+The variable message can hold various values at different times. And its value can change throughout the program.
+
+
+
+
+
+Creating variables
+To define a variable, you use the following syntax:
+
+
+The = is the assignment operator. In this syntax, you assign a value to the variable_name.
+The value can be anything like a number, a string, etc., that you assign to the variable.
+The following defines a variable named counter and assign the number 1 to it:
+
+
+Naming variables
+When you name a variable, you need to adhere to some rules. If you don’t, you’ll get an error.
+The following are the variable rules that you should keep in mind:
+Variable names can contain only letters, numbers, and underscores (_). They can start with a letter or an underscore (_), not with a number.
+Variable names cannot contain spaces. To separate words in variables, you use underscores for example sorted_list.
+Variable names can not the same as keywords, reserved words, and built-in functions in Python.
+The following guidelines help you define good variable names:
+Variable names should be concise and descriptive. For example, the active_user variable is more descriptive than the au.
+Use underscores (_) to separate multiple words in the variable names.
+Avoid using the letter l and the uppercase letter O because they look like the number 1 and 0.
+Summary
+A variable is a label that you can assign a value to. The value of a variable can change throughout the program.
+Use the variable_name = value to create a variable.
+The variable names should be as concise and descriptive as possible. Also, they should adhere to Python variable naming rules.
+
+3 Introduction to Python string
+A string is a series of characters. In Python, anything inside quotes is a string. And you can use either single or double quotes. For example:
+
+If a string contains a single quote, you should place it in double-quotes like this:
+
+And when a string contains double quotes, you can use the single quotes:
+
+To escape the quotes, you use the backslash (\). For example:
+
+The Python interpreter will treat the backslash character (\) special. If you don’t want it to do so, you can use raw strings by adding the letter r before the first quote. For example:
+
+Creating multiline strings
+To span a string multiple lines, you use triple-quotes “””…””” or ”’…”’. For example:
+
+It’ll output the following if you execute the program:
+
+Using variables in Python strings with the f-strings
+Sometimes, you want to use the values of variables in a string.
+For example, you may want to use the value of the name variable inside the message string variable:
+
+To do it, you place the letter f before the opening quotation mark and put the brace around the variable name:
+
+Python will replace the {name} by the value of the name variable. The code will show the following on the screen:
+
+The message is a format string, or f-string in short. Python introduced the f-string in version 3.6.
+
+Concatenating Python strings
+When you place the string literals next to each other, Python automatically concatenates them into one string. For example:
+
+
+To concatenate two string variables, you use the operator +:
+
+Accessing string elements
+Since a string is a sequence of characters, you can access its elements using an index. The first character in the string has an index of zero.
+The following example shows how to access elements using an index:
+
+How it works:
+First, create a variable that holds a string "Python String".
+Then, access the first and second characters of the string by using the square brackets [] and indexes.
+If you use a negative index, Python returns the character starting from the end of the string. For example:
+
+Getting the length of a string
+To get the length of a string, you use the len() function. For example:
+
+
+Slicing strings
+Slicing allows you to get a substring from a string. For example:
+
+The str[0:2] returns a substring that includes the character from the index 0 (included) to 2 (excluded).
+The syntax for slicing is as follows:
+
+
+The substring always includes the character at the start and excludes the string at the end.
+The start and end are optional. If you omit the start, it defaults to zero. If you omit the end, it defaults to the string’s length.
+
+
+Python strings are immutable
+Python strings are immutable. It means that you cannot change the string. For example, you’ll get an error if you update one or more characters in a string:
+
+When we want to modify a string, you need to create a new one from the existing string. For example:
+
+
+Summary
+In Python, a string is a series of characters. Also, Python strings are immutable.
+Use quotes, either single-quotes or double-quotes to create string literals.
+Use the backslash character \ to escape quotes in strings
+Use raw strings r'...' to escape the backslash character.
+Use f-strings to insert substitute variables in literal strings.
+Place literal strings next to each other to concatenate them. And use the + operator to concatenate string variables.
+Use the len() function to get the size of a string.
+Use the str[n] to access the character at the position n of the string str.
+Use slicing to extract a substring from a string.
+
+4 Python Numbers
+
+Python supports integers, floats, and complex numbers. This tutorial discusses only integers and floats.
+Integers
+The integers are numbers such as -1, 0, 1, 2, 3, .. and they have type int.
+You can use Math operators like +, -, *, and / to form expressions that include integers. For example:
+
+
+To calculate exponents, you use two multiplication symbols (**). For example:
+
+To modify the order of operations, you use the parentheses (). For example:
+
+Floats
+Any number with a decimal point is a floating-point number. The term float means that the decimal point can appear at any position in a number.
+In general, you can use floats like integers. For example:
+
+
+The division of two integers always returns a float:
+
+If you mix an integer and a float in any arithmetic operation, the result is a float:
+
+Due to the internal representation of floats, Python will try to represent the result as precisely as possible. However, you may get the result that you would not expect. For example:
+
+Underscores in numbers
+When a number is large, it’ll become difficult to read. For example:
+
+To make the long numbers more readable, you can group digits using underscores, like this:
+
+
+When storing these values, Python just ignores the underscores. It does so when displaying the numbers with underscores on screen:
+
+
+The underscores also work for both integers and floats.
+Note that the underscores in numbers has been available since Python 3.6
+
+
+Summary
+Python supports common numeric types including integers, floats, and complex numbers.
+Use the underscores to group numbers for the large numbers.
+
+
+5 Introduction to Python Boolean data type
+
+In programming, you often want to check if a condition is true or not and perform some actions based on the result.
+To represent true and false, Python provides you with the boolean data type. The boolean value has a technical name as bool.
+The boolean data type has two values: True and False.
+Note that the boolean values True and False start with the capital letters (T) and (F).
+The following example defines two boolean variables:
+When you compare two numbers, Python returns the result as a boolean value. For example:
+
+
+Also, comparing two strings results in a boolean value:
+
+
+The bool() function
+To find out if a value is True or False, you use the bool() function. For example:
+
+As you can see clearly from the output, some values evaluate to True and the others evaluate to False.
+Falsy and Truthy values
+When a value evaluates to True, it’s truthy. And if a value evaluates to False, it’s falsy.
+The following are falsy values in Python:
+The number zero (0)
+An empty string ''
+False
+None
+An empty list []
+An empty tuple ()
+An empty dictionary {}
+The truthy values are the other values that aren’t falsy.
+
+
+
+
+Summary
+Python boolean data type has two values: True and False.
+Use the bool() function to test if a value is True or False.
+The falsy values evaluate to False while the truthy values evaluate to True.
+Falsy values are the number zero, an empty string, False, None, an empty list, an empty tuple, and an empty dictionary. Truthy values are the values that are not falsy.
+6 Python Constants
+
+Sometimes, you may want to store values in variables. But you don’t want to change these values throughout the execution of the program.
+To do it in other programming languages, you can use constants. The constants like variables but their values don’t change during the program executes.
+The bad news is that Python doesn’t support constants.
+To work around this, you use all capital letters to name a variable to indicate that the variable should be treated as a constant. For example:
+
+When encountering variables like these, you should not change their values. These variables are constant by convention, not by rules.
+Summary
+Python doesn’t have built-in constant types.
+By convention, Python uses a variable whose name contains all capital letters to define a constant.
+
+
+7 Introduction to Python comments
+Sometimes, you want to document the code that you write. For example, you may want to note why a piece of code works. To do it, you use the comments.
+Typically, you use comments to explain formulas, algorithms, and complex business logic.
+When executing a program, the Python interpreter ignores the comments and only interprets the code.
+Python provides three kinds of comments including block comment, inline comment, and documentation string.
+Python block comments
+A block comment explains the code that follows it. Typically, you indent a block comment at the same level as the code block.
+To create a block comment, you start with a single hash sign (#) followed by a single space and a text string. For example:
+
+Python inline comments
+When you place a comment on the same line as a statement, you’ll have an inline comment.
+Similar to a block comment, an inline comment begins with a single hash sign (#) and is followed by a space and a text string.
+The following example illustrates an inline comment:
+
+
+Python docstrings
+A documentation string is a string literal that you put as the first lines in a code block, for example, a function.
+Unlike a regular comment, a documentation string can be accessed at run-time using  obj.__doc__ attribute where obj is the name of the function.
+Typically, you use a documentation string to automatically generate the code documentation.
+Documentation strings is called docstrings.
+Technically speaking, docstrings are not the comments. They create anonymous variables that reference the strings. Also, they’re not ignored by the Python interpreter.
+Python provides two kinds of docstrings: one-line docstrings and multi-line docstrings.
+Python docstrings
+A documentation string is a string literal that you put as the first lines in a code block, for example, a function.
+Unlike a regular comment, a documentation string can be accessed at run-time using  obj.__doc__ attribute where obj is the name of the function.
+Typically, you use a documentation string to automatically generate the code documentation.
+Documentation strings is called docstrings.
+Technically speaking, docstrings are not the comments. They create anonymous variables that reference the strings. Also, they’re not ignored by the Python interpreter.
+Python provides two kinds of docstrings: one-line docstrings and multi-line docstrings.
+
+Multi-line docstrings
+Unlike a one-line docstring, a multi-line docstring can span multiple lines. A multi-line docstring also starts with triple quotes (""") and ends with triple quotes (""").
+The following example shows you how to use multi-line docstrings:
+
+
+Python multiline comments
+Python doesn’t support multiline comments.
+However, you can use multi-line docstrings as multiline comments. Guido van Rossum, the creator of Python, also recommended this.
+It’s a good practice to keep your comment clear, concise, and explanatory. The ultimate goal is to save time and energy for you and other developers who will work on the code later.
+
+
+Summary
+Use comments to document your code when necessary.
+A block comment and inline comment starts with a hash sign (#).
+Use docstrings for functions, modules, and classes.
+
+
+-------------------------------------------------------------------        
     </pre>
     </div>
     <hr />
